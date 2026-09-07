@@ -38,4 +38,19 @@ const findById = (id) => {
    return user || false;
 };
 
+const updateOneById = (id, updatedData) => {
+   const user = findById(id);
+   if (!user) return false;
+
+   if (updatedData.name) user.name = updatedData.name;
+   if (updatedData.email) user.email = updatedData.email;
+   if (updatedData.password) user.password = updatedData.password;
+   if (updatedData.phone_number) user.phone_number = updatedData.phone_number;
+   if (updatedData.gender) user.gender = updatedData.gender;
+   if (updatedData.date_of_birth) user.date_of_birth = updatedData.date_of_birth;
+   if (updatedData.membership_status) user.membership_status = updatedData.membership_status;
+
+   return user;
+};
+
 module.exports = { getAll };
