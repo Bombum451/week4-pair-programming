@@ -70,4 +70,12 @@ module.exports = {
    deleteOneById,
 };
 
-module.exports = { getAll };
+const User = require('../models/userModel');
+
+const getAllUsers = (req, res) => {
+   res.json(User.getAll());
+};
+
+module.exports = { getAllUsers };
+
+//module.exports = { getAll };
