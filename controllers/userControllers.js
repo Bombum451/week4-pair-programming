@@ -44,8 +44,21 @@ const getUserById = (req, res) => {
   res.json(user);
 };
 
+const updateUser = (req, res) => {
+  const { userId } = req.params;
+
+  const updatedUser = User.updateOneById(userId, req.body);
+
+  if (!updatedUser) {
+    return res.status(404).json({ message: 'User not found' });
+  }
+
+  res.json(updatedUser);
+};
+
 module.exports = {
   getAllUsers,
   createUser,
   getUserById,
+  updateUser,
 };
