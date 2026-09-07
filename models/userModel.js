@@ -33,4 +33,9 @@ const addOne = (
    return newUser;
 };
 
+const findById = (id) => {
+   const user = userArray.find((u) => u.id === Number(id));
+   return user || false;
+};
+
 module.exports = { getAll };
