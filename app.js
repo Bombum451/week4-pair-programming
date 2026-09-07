@@ -44,8 +44,8 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/users", userRouter);
 app.use("/api/tours", tourRouter);
+app.use("/api/users", userRouter);
 
 const port = 4000;
 
