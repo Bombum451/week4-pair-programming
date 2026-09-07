@@ -16,7 +16,7 @@ let tourArray = [];
 let nextId = 1;
 
 const getAll = () => {
-  return tourArray;
+   return tourArray;
 };
 
 const addOne = (name, info, image, price, duration, groupSize, rating, availability) => {
