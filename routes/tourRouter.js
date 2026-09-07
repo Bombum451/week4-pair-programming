@@ -5,6 +5,7 @@ const { getAllTours } = require('../controllers/tourControllers');
 
 router.get('/', getAllTours);
 router.post('/', createTour);
+router.get('/:tourId', getTourById);
 
 module.exports = router;
 
