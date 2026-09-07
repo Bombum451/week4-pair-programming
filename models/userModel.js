@@ -62,4 +62,12 @@ const deleteOneById = (id) => {
    return userArray.length < initialLength;
 };
 
+module.exports = {
+   getAll,
+   addOne,
+   findById,
+   updateOneById,
+   deleteOneById,
+};
+
 module.exports = { getAll };
