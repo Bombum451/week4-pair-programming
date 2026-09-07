@@ -1,7 +1,7 @@
 const Tour = require('../models/tourModel');
 
 const getAllTours = (req, res) => {
-  res.json(Tour.getAll());
+   res.json(Tour.getAll());
 };
  
 const createTour = (req, res) => {
