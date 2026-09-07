@@ -12,7 +12,7 @@ const createTour = (req, res) => {
       return res.status(500).json({ message: 'Fail to create tour' });
    }
 
-   res.json(newTour);
+   res.status(201).json(newTour);
 };
 
 const getTourById = (req, res) => {
