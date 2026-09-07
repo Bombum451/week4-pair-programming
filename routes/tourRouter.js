@@ -7,6 +7,7 @@ router.get('/', getAllTours);
 router.post('/', createTour);
 router.get('/:tourId', getTourById);
 router.put('/:tourId', updateTour);
+router.delete('/:tourId', deleteTour);
 
 module.exports = router;
 
